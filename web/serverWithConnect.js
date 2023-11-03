@@ -22,7 +22,7 @@ async function main() {
     res.send('Hola Mundo!');
   });
 
-  const server = app.listen(7000, () => {
+  const server = app.listen(80, () => {
     console.log(`Express running ? PORT ${server.address().port}`);
   });
 
@@ -38,7 +38,7 @@ async function main() {
     fifthChoice: String,
   });
   const ballotCast = mongoose.model('original-ballots', voteSchema);
-  const vote01 = new ballotCast({ voterName: 'Ben Franklin', voterID: 7, firstChoice: "William Henry Harrison", secondChoice: "Taylor Swift", thirdChoice: "George Washington",
+  const vote01 = new ballotCast({ voterName: 'Ben Franklin', voterID: 10, firstChoice: "William Henry Harrison", secondChoice: "Taylor Swift", thirdChoice: "George Washington",
      fourthChoice: "Mr. Bean", fifthChoice: "Malcom X"});
   vote01.save();
   console.log("Vote recorded for " + vote01.voterName);
